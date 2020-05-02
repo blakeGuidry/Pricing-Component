@@ -9,8 +9,34 @@ connection.connect((err) => {
     console.log('connected db');
 });
 
+//query helper functions
+
+//just to render json to client testing connecion
+const getAll =(callback) => {
+  connection.query('SELECT * FROM products;',(err, all) => {
+    if(err){
+      console.log('error query db getAll', err);
+      callback(err, null)
+    } else {
+      callback(null, all)
+    }
+  });
+}
 
 
 
+const getPrice = (sku,cb) => {
+  connection.query('SELECT * FROM products WHERE sku = ?;', (err, data)=> {
+    if(err){
+      console.log('error query db getPrice', err);
+      cb(err, null)
+    } else {
+      cb(null, data)
+    }
+  });
+}
 
-//module.exports. = ;
+
+
+module.exports.getPrice = getPrice;
+module.exports.getAll = getAll;

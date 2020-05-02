@@ -12,18 +12,19 @@ App.use(cors());
 App.use(bodyParser.json());
 App.use(bodyParser.urlencoded({extended: true}));
 
-// app.get('/api/price', (req, res) => {
-//   queries.getPrice((err, Price) => {
-//     if (err) {
-//       res.status(404).send('error in server could not get the Price!'); // 404 Not Found
-//     } else {
-//       res.send(Price);
-//     }
-//   })
-// });
-
-
-
+App.get("/", (req, res) => {
+  res.send("success connected FEC");
+});
+//TODO: refactor to use queries.getPrice below
+App.get('/api/price', (req, res) => {
+  queries.getAll((err, Price) => {
+    if (err) {
+      res.status(404).send('error in server could not get the Price!'); // 404 Not Found
+    } else {
+      res.send(Price);
+    }
+  })
+});
 
 
 App.listen (PORT,(err) => {
