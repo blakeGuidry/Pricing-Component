@@ -18,7 +18,7 @@ class App extends Component {
     this.getPrice();
   }
   getPrice(){
-    axios.get('http://localhost:9003/api/price',{ params: {sku: this.state.sku}})
+    axios.get('http://localhost:9003/api/price',{params:{sku: this.state.sku}})
     .then(res => {
       console.log('success!')
       const test = res.data;
