@@ -13,7 +13,7 @@ App.use(bodyParser.json());
 App.use(bodyParser.urlencoded({extended: true}));
 
 App.get("/", (req, res) => {
-  res.send("success connected FEC");
+  res.send("success connected FEC server to client");
 });
 //TODO: refactor to use queries.getPrice below
 App.get('/api/price', (req, res) => {
@@ -31,6 +31,6 @@ App.listen (PORT,(err) => {
   if(err){
     console.log("App.listen broke")
   }else{
-    console.log("server successfully running on PORT")
+    console.log(`server successfully running on ${PORT}`)
   }
 });
