@@ -7,9 +7,14 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      sku: '134511',
+
+      sku: '134511', //---> wilson
       product_info: '',
-      isRendered: false
+      isRendered: false,
+      price: [],
+      msrp: [],
+      quantity: []
+
     };
     this.getPrice = this.getPrice.bind(this);
   }
@@ -17,7 +22,7 @@ class App extends Component {
     this.getPrice();
   }
   getPrice(){
-    axios.get('http://localhost:9003/api/price',{params:{sku: this.state.sku}})
+    axios.get('http://localhost:9003/api/price',{params:{sku: 134511}})
     .then(res => {
       console.log('success!')
       const product_info = res.data;
@@ -35,6 +40,7 @@ class App extends Component {
   render() {
     return (
       <div>
+
         <p>{ this.state.isRendered ? JSON.stringify(this.state.product_info): "hasnt loaded yet"}</p>
 
       </div>

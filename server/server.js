@@ -17,12 +17,14 @@ App.get("/", (req, res) => {
 });
 
 App.get('/api/price', (req, res) => {
+
   queries.getOne(req.query.sku,(err, productInfo) => {
     if (err) {
       res.status(404).send('error in server could not get the Price!'); // 404 Not Found
     } else {
       console.log("this is req.query",req.query.sku);
       res.send(productInfo);
+
     }
   })
 });
