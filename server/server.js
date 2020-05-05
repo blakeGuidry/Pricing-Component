@@ -15,14 +15,16 @@ App.use(bodyParser.urlencoded({extended: true}));
 App.get("/", (req, res) => {
   res.send("success connected FEC server to client");
 });
-//TODO: refactor to use queries.getPrice below
+
 App.get('/api/price', (req, res) => {
-  queries.getOne(req.query.sku,(err, Price) => {
+
+  queries.getOne(req.query.sku,(err, productInfo) => {
     if (err) {
       res.status(404).send('error in server could not get the Price!'); // 404 Not Found
     } else {
-      console.log("this is req.query:",req.query);
-      res.send(Price);
+      console.log("this is req.query",req.query.sku);
+      res.send(productInfo);
+
     }
   })
 });
