@@ -17,11 +17,11 @@ App.get("/", (req, res) => {
 });
 //TODO: refactor to use queries.getPrice below
 App.get('/api/price', (req, res) => {
-  queries.getPrice(req.query.sku,(err, Price) => {
+  queries.getOne(req.query.sku,(err, Price) => {
     if (err) {
       res.status(404).send('error in server could not get the Price!'); // 404 Not Found
     } else {
-      console.log("this is req.query boi",req.query.sku);
+      console.log("this is req.query:",req.query);
       res.send(Price);
     }
   })

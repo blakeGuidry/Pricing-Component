@@ -20,7 +20,7 @@ class App extends Component {
     this.getPrice();
   }
   getPrice(){
-    axios.get('http://localhost:9003/api/price',{params:{sku: this.state.sku}})
+    axios.get('http://localhost:9003/api/price',{params:{sku: 134511}})
     .then(res => {
       console.log('success!')
       const test = res.data;
@@ -38,7 +38,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <p>{ this.state.isRendered ? JSON.stringify(this.state.test): "page hasnt loaded yet"}</p>
+        <span>{ this.state.isRendered ? JSON.stringify(this.state.test): "page hasnt loaded yet"}</span>
 
       </div>
     );
