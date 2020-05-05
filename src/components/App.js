@@ -58,7 +58,7 @@ class App extends Component {
         <Fullfillment availability ={this.state.quantity} />
         <AddToCart productInCart = {this.state.product_info} />
 
-        <p>{ this.state.isRendered ? JSON.stringify(this.state.product_info): "hasnt loaded yet"}</p>
+        
 
       </div>
     );
