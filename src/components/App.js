@@ -1,4 +1,10 @@
 import React, { Component } from "react";
+
+import Price from './Price';
+import PriceMatch from './PriceMatch';
+import Fullfillment from './Fullfillment';
+import AddToCart from './AddToCart';
+
 import '../styles/main.css';
 import app from './App';
 let axios = require('axios');
@@ -25,14 +31,21 @@ class App extends Component {
     axios.get('http://localhost:9003/api/price',{params:{sku: 134511}})
     .then(res => {
       console.log('success!')
-      const product_info = res.data;
-      const isRendered = true;
-
+      let product_info = res.data;
+      let isRendered = true;
+      let price = res.data[0]["sale_price"];
+      let msrp =res.data[0]["msrp"];
+      let quantity = res.data[0]["quantity"];
+      console.log(price)
       this.setState({product_info});
       this.setState({isRendered});
+      this.setState({msrp});
+      this.setState({price});
+      this.setState({quantity});
     })
     .catch( err => {
         console.log("whoops!",err);
+
     })
   }
 
@@ -40,8 +53,12 @@ class App extends Component {
   render() {
     return (
       <div>
+        <PriceMatch matching={this.state.msrp} />
+        <Price pricing={this.state.price} />
+        <Fullfillment availability ={this.state.quantity} />
+        <AddToCart productInCart = {this.state.product_info} />
 
-        <p>{ this.state.isRendered ? JSON.stringify(this.state.product_info): "hasnt loaded yet"}</p>
+        
 
       </div>
     );
