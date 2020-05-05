@@ -7,9 +7,8 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      message: "Hello World",
       sku: '134511',
-      test: '',
+      product_info: '',
       isRendered: false
     };
     this.getPrice = this.getPrice.bind(this);
@@ -21,10 +20,10 @@ class App extends Component {
     axios.get('http://localhost:9003/api/price',{params:{sku: this.state.sku}})
     .then(res => {
       console.log('success!')
-      const test = res.data;
+      const product_info = res.data;
       const isRendered = true;
 
-      this.setState({test});
+      this.setState({product_info});
       this.setState({isRendered});
     })
     .catch( err => {
@@ -36,7 +35,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <p>{ this.state.isRendered ? JSON.stringify(this.state.test): "hasnt loaded yet"}</p>
+        <p>{ this.state.isRendered ? JSON.stringify(this.state.product_info): "hasnt loaded yet"}</p>
 
       </div>
     );

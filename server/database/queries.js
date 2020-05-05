@@ -25,7 +25,7 @@ const getAll =(callback) => {
 
 
 
-const getPrice = (sku,cb) => {
+const getOne = (sku,cb) => {
   connection.query('SELECT * FROM products WHERE sku = ?;', [sku] ,(err, data)=> {
     if(err){
       console.log('error query db getPrice', err);
@@ -38,5 +38,5 @@ const getPrice = (sku,cb) => {
 
 
 
-module.exports.getPrice = getPrice;
+module.exports.getOne = getOne;
 module.exports.getAll = getAll;
