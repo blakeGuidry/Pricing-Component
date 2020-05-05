@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 const Price = (props) => {
 //use hooks here
   return (
-    <div class="pricing-price">
-      
-
+    <div id="pricing-price">
+      {`$${props.pricing}`}
     </div>
   )
 
 }
+export default Price;
