@@ -18,28 +18,104 @@ CREATE TABLE products(
   ,quantity INTEGER  NOT NULL
   ,category VARCHAR(25) NOT NULL
 );
-INSERT INTO products(sku,product_title,sale_price,msrp,quantity,category) VALUES (134511,'Microsoft Windows Millennium (2000)',1999.99,59.99,7,'computer');
-INSERT INTO products(sku,product_title,sale_price,msrp,quantity,category) VALUES (134512,'Microsoft Bob',1499.99,79.99,12,'computer');
-INSERT INTO products(sku,product_title,sale_price,msrp,quantity,category) VALUES (134513,'Microsoft Internet Explorer 6 (2001)',2999.99,99.99,10,'computer');
-INSERT INTO products(sku,product_title,sale_price,msrp,quantity,category) VALUES (134514,'Gateway 2000 10th Anniversary PC (1995)',169.99,150.00,1,'computer');
-INSERT INTO products(sku,product_title,sale_price,msrp,quantity,category) VALUES (134515,'Iomega Zip Drive',79.99,499.99,8,'computer');
-INSERT INTO products(sku,product_title,sale_price,msrp,quantity,category) VALUES (134516,'Comet Systems Comet Cursor (1997)',39.99,159.99,22,'computer');
-INSERT INTO products(sku,product_title,sale_price,msrp,quantity,category) VALUES (134517,'Apple Macintosh Portable',1049.99,119.99,3,'computer');
-INSERT INTO products(sku,product_title,sale_price,msrp,quantity,category) VALUES (134518,'IBM Deskstar 75GXP',999.99,169.99,19,'computer');
-INSERT INTO products(sku,product_title,sale_price,msrp,quantity,category) VALUES (134519,'OQO Model 1',1499.99,799.99,6,'computer');
-INSERT INTO products(sku,product_title,sale_price,msrp,quantity,category) VALUES (134520,'DigitalConvergence CueCat',899.99,1299.99,5,'computer');
-INSERT INTO products(sku,product_title,sale_price,msrp,quantity,category) VALUES (134521,'Eyetop Wearable DVD Player',35999.99,49.99,45,'computer');
-INSERT INTO products(sku,product_title,sale_price,msrp,quantity,category) VALUES (134522,'The NoPhone Air',799.99,59.99,1,'computer');
-INSERT INTO products(sku,product_title,sale_price,msrp,quantity,category) VALUES (134523,'Commodore Plus/4',789.98,299.99,8,'computer');
-INSERT INTO products(sku,product_title,sale_price,msrp,quantity,category) VALUES (134524,'Sinclair QL',389.99,149.99,16,'computer');
-INSERT INTO products(sku,product_title,sale_price,msrp,quantity,category) VALUES (134525,'Refurbished Compaq Desktop',1044.99,79.99,3,'computer');
-INSERT INTO products(sku,product_title,sale_price,msrp,quantity,category) VALUES (134526,'Refurbished OptiPlex Desktop',249.99,99.99,5,'computer');
-INSERT INTO products(sku,product_title,sale_price,msrp,quantity,category) VALUES (134527,'Chrumybook - Sparkly Silver',134.99,79.99,89,'computer');
-INSERT INTO products(sku,product_title,sale_price,msrp,quantity,category) VALUES (134528,'Samsing laptop',159.99,89.99,6,'computer');
-INSERT INTO products(sku,product_title,sale_price,msrp,quantity,category) VALUES (134529,'dull laptop',1129.99,459.99,18,'computer');
-INSERT INTO products(sku,product_title,sale_price,msrp,quantity,category) VALUES (134530,'Mucbook novice',912.99,199.99,56,'computer');
-INSERT INTO products(sku,product_title,sale_price,msrp,quantity,category) VALUES (134531,'humanware laptop',89.99,29.99,5,'computer');
-INSERT INTO products(sku,product_title,sale_price,msrp,quantity,category) VALUES (134532,'laptop',999.99,29.99,8,'computer');
-INSERT INTO products(sku,product_title,sale_price,msrp,quantity,category) VALUES (134533,'samsing ultimate laptop',1199.99,999.99,14,'computer');
-INSERT INTO products(sku,product_title,sale_price,msrp,quantity,category) VALUES (134534,'Tushiba laptop',799.99,599.99,18,'computer');
-
+INSERT INTO products(sku,product_title,sale_price,msrp,quantity,category) VALUES
+ (134511,'Microsoft Windows Millennium (2000)',1999.99,59.99,7,'computer')
+,(134512,'Microsoft Bob',1499.99,79.99,12,'computer')
+,(134513,'Microsoft Internet Explorer 6 (2001)',2999.99,99.99,10,'computer')
+,(134514,'Gateway 2000 10th Anniversary PC (1995)',169.99,150.00,1,'computer')
+,(134515,'Iomega Zip Drive',79.99,499.99,8,'computer')
+,(134516,'Comet Systems Comet Cursor (1997)',39.99,159.99,22,'computer')
+,(134517,'Apple Macintosh Portable',1049.99,119.99,3,'computer')
+,(134518,'IBM Deskstar 75GXP',999.99,169.99,19,'computer')
+,(134519,'OQO Model 1',1499.99,799.99,6,'computer')
+,(134520,'DigitalConvergence CueCat',899.99,1299.99,5,'computer')
+,(134521,'Eyetop Wearable DVD Player',35999.99,49.99,45,'computer')
+,(134522,'The NoPhone Air',799.99,59.99,1,'computer')
+,(134523,'Commodore Plus/4',789.98,299.99,8,'computer')
+,(134524,'Sinclair QL',389.99,149.99,16,'computer')
+,(134525,'Refurbished Compaq Desktop',1044.99,79.99,3,'computer')
+,(134526,'Refurbished OptiPlex Desktop',249.99,99.99,5,'computer')
+,(134527,'Chrumybook - Sparkly Silver',134.99,79.99,89,'computer')
+,(134528,'Samsing laptop',159.99,89.99,6,'computer')
+,(134529,'dull laptop',1129.99,459.99,18,'computer')
+,(134530,'Mucbook novice',912.99,199.99,56,'computer')
+,(134531,'humanware laptop',89.99,29.99,5,'computer')
+,(134532,'laptop',999.99,29.99,8,'computer')
+,(134533,'samsing ultimate laptop',1199.99,999.99,14,'computer')
+,(134534,'Tushiba laptop',799.99,599.99,18,'computer')
+,(510121,'Super Smashed Bros',39.99,59.99,5,'media')
+,(510122,'Montris',39.99,59.99,8,'media')
+,(510123,'Snac-Man',39.99,59.99,3,'media')
+,(510124,'Dankey Kang',39.99,59.99,5,'media')
+,(510125,'Gagala',39.99,59.99,12,'media')
+,(510126,'007: Pink in Eye',39.99,59.99,8,'media')
+,(510127,'Average Mario',39.99,59.99,3,'media')
+,(510128,'Duck Hunt',39.99,59.99,1,'media')
+,(510129,'Kirby',39.99,59.99,5,'media')
+,(510130,'Call of Jury Duty: Modern Inconvenience',29.99,59.99,3,'media')
+,(510131,'To Catch a Pokemon',29.99,59.99,14,'media')
+,(510132,'To Kill a Mockingbird',29.99,59.99,9,'media')
+,(510133,'Overclock',29.99,59.99,6,'media')
+,(510134,'Sonic The Restaurant',49.99,59.99,11,'media')
+,(510135,'John Sick 2',49.99,59.99,2,'media')
+,(510136,'Rhymecraft',49.99,59.99,23,'media')
+,(510137,'The Amazing Raccoon Man 2',49.99,59.99,53,'media')
+,(510138,'The Elder Scrolls XVI',49.99,59.99,16,'media')
+,(510139,'PlayerVeryKnown Battlegrounds',49.99,59.99,46,'media')
+,(510140,'Resident Evil',49.99,59.99,86,'media')
+,(510141,'Rock Paper Scissors with a twist',49.99,59.99,54,'media')
+,(510142,'Street Fighter: 6th Street',39.99,59.99,2,'media')
+,(510143,'Mortal Kombat',39.99,59.99,4,'media')
+,(510144,'Krogger',39.99,59.99,7,'media')
+,(510145,'Candy Crush',39.99,59.99,2,'media')
+,(125610,'Shooting lessons',99.99,99.99,10,'photography hardware')
+,(125611,'PowerShot',199.99,299.99,12,'photography hardware')
+,(125612,'SD Card',49.99,59.99,8,'photography hardware')
+,(125613,'Rugged Wrist Strap',78.50,79.99,5,'photography hardware')
+,(125614,'Replacement Battery',89.99,99.99,11,'photography hardware')
+,(125615,'Camera Tri Pod',139.99,150.00,3,'photography hardware')
+,(125616,'Studio Lighting',399.99,499.99,1,'photography hardware')
+,(125617,'Extra Large Camera Backpack',129.99,159.99,2,'photography hardware')
+,(125618,'Small Camera Backpack',99.99,119.99,5,'photography hardware')
+,(125619,'Camera Backpack',149.99,169.99,1,'photography hardware')
+,(125620,'IXY D5 Waterproof',599.99,799.99,2,'photography hardware')
+,(125621,'XL1 Camera',899.99,1299.99,1,'photography hardware')
+,(125622,'Camera roll tape',49.99,49.99,7,'photography hardware')
+,(125623,'SD Card',39.99,59.99,24,'photography hardware')
+,(125624,'Super zoom lens',199.99,299.99,64,'photography hardware')
+,(125625,'Macro zoom lens',149.99,149.99,18,'photography hardware')
+,(125626,'Professional camera slider',69.99,79.99,31,'photography hardware')
+,(125627,'Professional camera tripod with slider',89.99,99.99,98,'photography hardware')
+,(125628,'Camera Sling Strap',69.99,79.99,225,'photography hardware')
+,(125629,'Premiuem Camera Sling',79.99,89.99,149,'photography hardware')
+,(125630,'3 Axis stablizer',419.99,459.99,49,'photography hardware')
+,(125631,'iPhone Stablizer',199.99,199.99,2,'photography hardware')
+,(125632,'Lens filter',19.99,29.99,59,'photography hardware')
+,(125633,'Lens polarizer',29.99,29.99,37,'photography hardware')
+,(125634,'4K Drone',899.99,999.99,16,'photography hardware')
+,(125635,'Hero 17 Black Edition',499.99,599.99,42,'photography hardware')
+,(235601,'Industrial Size washing machine',1499.99,1500.00,8,'appliances')
+,(235602,'Bottom control dishwasher',1999.99,699.99,7,'appliances')
+,(235603,'Left of range microwave',1499.99,799.99,12,'appliances')
+,(235604,'No door refigerator',2999.99,3499.99,10,'appliances')
+,(235605,'Low performance blender',169.99,199.99,1,'appliances')
+,(235606,'Super sonic hair wetter',79.99,119.99,8,'appliances')
+,(235607,'K classic',39.99,49.99,22,'appliances')
+,(235608,'Claymore Roomba',1049.99,1299.99,3,'appliances')
+,(235609,'Convertible range hood',999.99,1499.99,19,'appliances')
+,(235610,'Non-stainless steel refrigerator',1499.99,1799.99,6,'appliances')
+,(235611,'Free standing electric range',899.99,999.99,5,'appliances')
+,(235612,'Dracor refigerator',35999.99,19999.99,45,'appliances')
+,(235613,'Family Hub 94 cu. in. refrigerator',799.99,999.99,1,'appliances')
+,(235614,'Under the range mirowave',78.99,84.99,8,'appliances')
+,(235615,'POWERbot robot vacuum cleaner',389.99,399.99,16,'appliances')
+,(235616,'High Tech dryer',44.99,68.99,3,'appliances')
+,(235617,'Ball Animal vacuum cleaner',249.99,299.99,5,'appliances')
+,(235618,'Max cool fan',34.99,49.99,89,'appliances')
+,(235619,'V7 cordless hand vac',159.99,189.99,6,'appliances')
+,(235620,'Latte maker',129.99,189.99,18,'appliances')
+,(235621,'Single serve and carafe coffee maker',12.99,19.99,56,'appliances')
+,(235622,'K-Elite coffee maker',89.99,99.99,5,'appliances')
+,(235623,'Short tub built in dishwasher',999.99,1199.99,8,'appliances')
+,(235624,'Gas cook-top',1199.99,1499.99,14,'appliances')
+,(235625,'Self-dirtying oven',799.99,1199.99,18,'appliances');

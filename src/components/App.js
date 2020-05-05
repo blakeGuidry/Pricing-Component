@@ -7,10 +7,12 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      message: "Hello World",
-      sku: '134511',
+      sku: '134511', //---> wilson
       test: '',
-      isRendered: false
+      isRendered: false,
+      price: [],
+      msrp: [],
+      quantity: []
     };
     this.getPrice = this.getPrice.bind(this);
   }
@@ -36,7 +38,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <p>{ this.state.isRendered ? JSON.stringify(this.state.test): "hasnt loaded yet"}</p>
+        <p>{ this.state.isRendered ? JSON.stringify(this.state.test): "page hasnt loaded yet"}</p>
 
       </div>
     );
