@@ -4,8 +4,6 @@ import Price from './Price';
 import PriceMatch from './PriceMatch';
 import Fullfillment from './Fullfillment';
 import AddToCart from './AddToCart';
-
-import '../styles/main.css';
 import app from './App';
 let axios = require('axios');
 
@@ -28,7 +26,7 @@ class App extends Component {
     this.getPrice();
   }
   getPrice(){
-    axios.get('http://localhost:9003/api/price',{params:{sku: 134511}})
+    axios.get('/price',{params:{sku: 134511}})
     .then(res => {
       console.log('success!')
       let product_info = res.data;
@@ -58,7 +56,7 @@ class App extends Component {
         <Fullfillment availability ={this.state.quantity} />
         <AddToCart productInCart = {this.state.product_info} />
 
-        
+
 
       </div>
     );

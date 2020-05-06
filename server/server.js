@@ -7,16 +7,17 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 
 //middlewware
-App.use(express.static(path.join(__dirname, './src/build' )));
 App.use(cors());
-App.use(bodyParser.json());
-App.use(bodyParser.urlencoded({extended: true}));
+App.use(express.static(path.join(__dirname, '../dist' )));
+
+//App.use(bodyParser.json());
+//App.use(bodyParser.urlencoded({extended: true}));
 
 App.get("/", (req, res) => {
   res.send("success connected FEC server to client");
 });
 
-App.get('/api/price', (req, res) => {
+App.get('/price', (req, res) => {
 
   queries.getOne(req.query.sku,(err, productInfo) => {
     if (err) {
