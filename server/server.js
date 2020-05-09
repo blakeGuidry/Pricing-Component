@@ -10,8 +10,8 @@ const cors = require('cors');
 App.use(cors());
 App.use(express.static(path.join(__dirname, '../dist' )));
 
-//App.use(bodyParser.json());
-//App.use(bodyParser.urlencoded({extended: true}));
+App.use(bodyParser.json());
+App.use(bodyParser.urlencoded({extended: true}));
 
 App.get("/", (req, res) => {
   res.send("success connected FEC server to client");
