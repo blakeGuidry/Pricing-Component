@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 
-import Price from './Price';
-import PriceMatch from './PriceMatch';
-import Fullfillment from './Fullfillment';
+
+import PriceMatch from './PriceMatch/PriceMatch.js';
+import Fullfillment from './Fullfillment/Fullfillment.js';
 import AddToCart from './AddToCart';
-import app from './App';
+//import app from './App';
 let axios = require('axios');
 
 class App extends Component {
@@ -23,10 +23,14 @@ class App extends Component {
     this.getPrice = this.getPrice.bind(this);
   }
   componentDidMount(){
+    //gets price
     this.getPrice();
+    //need to add some type of event listener that updates sku
+      //getprice
   }
   getPrice(){
-    axios.get('/price',{params:{sku: 134511}})
+    let sku = this.state.sku
+    axios.get('http://localhost:9003/price/',{params:{sku: sku}})
     .then(res => {
       console.log('success!')
       let product_info = res.data;
@@ -51,9 +55,8 @@ class App extends Component {
   render() {
     return (
       <div>
-        <PriceMatch matching={this.state.msrp} />
-        <Price pricing={this.state.price} />
-        <Fullfillment availability ={this.state.quantity} />
+        <PriceMatch matching={this.state.msrp} pricing={this.state.price}/>
+        <Fullfillment  availability ={this.state.quantity} />
         <AddToCart productInCart = {this.state.product_info} />
 
 

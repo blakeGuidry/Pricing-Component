@@ -23,11 +23,25 @@ module.exports = {
           },
         ],
       },
+      // {
+      //   test: /\.css$/i,
+      //   use: ['css-loader'],
+      // },
       {
         test: /\.css$/i,
-        use: ['css-loader'],
+        exclude: /node_modules/,
+        use: [
+          'style-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              modules: true,
+            },
+          },
+        ],
       },
     ],
+    
   },
   resolve: {
     extensions: ['*', '.js', '.jsx'],
