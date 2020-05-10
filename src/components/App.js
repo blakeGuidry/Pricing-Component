@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 
-import Price from './Price';
-import PriceMatch from './PriceMatch';
-import Fullfillment from './Fullfillment';
+
+import PriceMatch from './PriceMatch/PriceMatch.js';
+import Fullfillment from './Fullfillment/Fullfillment.js';
 import AddToCart from './AddToCart';
 //import app from './App';
 let axios = require('axios');
@@ -55,8 +55,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <PriceMatch matching={this.state.msrp} />
-        <Price pricing={this.state.price} />
+        <PriceMatch matching={this.state.msrp} pricing={this.state.price}/>
         <Fullfillment  availability ={this.state.quantity} />
         <AddToCart productInCart = {this.state.product_info} />
 

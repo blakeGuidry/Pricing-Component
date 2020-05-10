@@ -17,6 +17,7 @@ const AddToCart = (props) => {
       <div><b id="hereToHelp"> We're here to help.</b> </div>
       <div class="PLbuttons"><button type="button" class="btn-help " data-track="Contact Anywhere: Chat Now">Chat Now</button></div>
       <div class="imageContainer"><img src="https://pisces.bbystatic.com/image2/BestBuy_US/Gallery/GS-BS01-132098.png"  alt="Best Buy Support Team"></img></div>
+      
   </div>
 
   )

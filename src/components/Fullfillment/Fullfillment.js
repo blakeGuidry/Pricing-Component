@@ -1,6 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
-import styles from '../style.css';
+import styles from './style.css';
 
 const Fullfillment = (props) => {
 //use hooks here
