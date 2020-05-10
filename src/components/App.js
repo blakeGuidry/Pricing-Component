@@ -3,7 +3,7 @@ import React, { Component } from "react";
 
 import PriceMatch from './PriceMatch/PriceMatch.js';
 import Fullfillment from './Fullfillment/Fullfillment.js';
-import AddToCart from './AddToCart';
+import AddToCart from './AddToCart/AddToCart.js';
 //import app from './App';
 let axios = require('axios');
 
