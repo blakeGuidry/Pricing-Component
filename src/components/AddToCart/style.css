@@ -9,14 +9,10 @@
   border-left-width: 0;
   border-right-width: 0;
   border-top-color: rgb(197, 203, 213);
-
   border-top-width: 1px;
   border-bottom-color: rgb(197, 203, 213);
   border-bottom-style: solid;
   border-bottom-width: 0px;
-  /* align-content: space-between; */
-  /* flex-direction: column; */
-  /* box-sizing: border-box; */
   padding-bottom: 0px;
 }
 
@@ -33,24 +29,11 @@
     padding-left: 8px;
     width: 100%;
     font-size: 15px;
-
-    /* border-top-color: initial;
-    border-top-style: initial; */
     border-top-width: 0px;
-    /* border-right-color: initial;
-    border-right-style: initial; */
     border-right-width: 0px;
-    /* border-bottom-color: initial;
-    border-bottom-style: initial; */
     border-bottom-width: 0px;
-    /* border-left-color: initial;
-    border-left-style: initial; */
     border-left-width: 0px;
-    /* border-image-source: initial;
-    border-image-slice: initial;
-    border-image-width: initial;
-    border-image-outset: initial;
-    border-image-repeat: initial; */
+
 
     cursor: pointer;
     border-radius: 4px;
@@ -64,10 +47,6 @@
     transition-duration: 0.3s;
     transition-timing-function: ease-out;
     transition-delay: 0s;
-
-    /* overflow: visible;
-    overflow-x: visible;
-    overflow-y: visible; */
 
     letter-spacing: normal;
     word-spacing: normal;
@@ -96,7 +75,6 @@
     width: 16px;
     flex-grow: 0;
     flex-shrink: 0;
-    /* flex-basis: 16px; */
     position: relative;
     content: "";
     border-radius: 4px;
@@ -191,14 +169,10 @@
   border-left-width: 0;
   border-right-width: 0;
   border-top-color: rgb(197, 203, 213);
-
   border-top-width: 1px;
   border-bottom-color: rgb(197, 203, 213);
   border-bottom-style: solid;
   border-bottom-width: 0px;
-  /* align-content: space-between; */
-  /* flex-direction: column; */
-  /* box-sizing: border-box; */
   padding-bottom: 0px;
 }
 .titleContainer {
@@ -209,7 +183,6 @@
   justify-content: center;
   margin-bottom: 26px;
   padding-top: 32px;
-
   font-size: 13px;
     line-height: normal;
     color: #040c13;
@@ -229,8 +202,8 @@
   line-height: normal;
   letter-spacing: -1px;
 
-    color: #040c13;
-    font-family: Arial, Helvetica, sans-serif;
+  color: #040c13;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .helperButtonCont {
@@ -252,42 +225,36 @@
   margin-bottom: 0;
   width: 100%;
   font-size: 13px;
-    height: 30px;
-    line-height: normal;
+  height: 30px;
+  line-height: normal;
   padding-top: 0px;
-    padding-right: 24px;
-    padding-bottom: 0px;
-    padding-left: 24px;
+  padding-right: 24px;
+  padding-bottom: 0px;
+  padding-left: 24px;
 
-    border: 1px solid #0046be;
-    color: #0046be;
-    background: #fff;
-    text-decoration: none;
-
-    cursor: pointer;
-    border-radius: 4px;
-    font-weight: 500;
-    text-align: center;
-    vertical-align: middle;
-    display: inline-block;
-
-    transition: all .3s ease-out 0s;
-
-    font-family: inherit;
-    -webkit-appearance: button;
-    text-transform: none;
-    overflow: visible;
-    margin: 0;
-    box-sizing: border-box;
-
-    -webkit-writing-mode: horizontal-tb !important;
-    text-rendering: auto;
-    letter-spacing: normal;
-    word-spacing: normal;
-    text-indent: 0px;
-    text-shadow: none;
-    align-items: flex-start;
-
+  border: 1px solid #0046be;
+  color: #0046be;
+  background: #fff;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 4px;
+  font-weight: 500;
+  text-align: center;
+  vertical-align: middle;
+  display: inline-block;
+  transition: all .3s ease-out 0s;
+  font-family: inherit;
+  -webkit-appearance: button;
+  text-transform: none;
+  overflow: visible;
+  margin: 0;
+  box-sizing: border-box;
+  text-rendering: auto;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-indent: 0px;
+  text-shadow: none;
+  align-items: flex-start;
 }
 
 .memberOffers {
@@ -327,9 +294,6 @@
 }
 .rewardBtn {
   padding: unset !important;
-  height: unset !important;
-  line-height: unset !important;
-  text-align: left !important;
   border: none;
   background: none;
   color: #0457c8;
