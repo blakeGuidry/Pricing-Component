@@ -1,7 +1,7 @@
 {
   "AWSEBDockerrunVersion": "1",
   "Image": {
-    "Name": "coryh1007/price-repo:latest"
+    "Name": "coryh1007/price-repo"
   },
   "Ports": [
     {
