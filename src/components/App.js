@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-
+//This means your commit was successful buddy congrats you didnt lose a weeks worth of css , docker and AWS
 import PriceMatch from './PriceMatch/PriceMatch.js';
 import Fullfillment from './Fullfillment/Fullfillment.js';
 import AddToCart from './AddToCart/AddToCart.js';
