@@ -4,21 +4,22 @@ FROM node:12.14-alpine
 
 #A directory within the virtualized Docker environment
 # Becomes more relevant when using Docker Compose later
-WORKDIR /usr/src/app
+WORKDIR '/pricing-component'
 
 # Copies package.json and package-lock.json to Docker environment
 COPY package*.json ./
 
 # Installs all node packages
 RUN npm install
-RUN dev
+
 
 # Copies everything over to Docker environment
 COPY . .
 
+RUN npm run dev
 
 # Uses port which is used by the actual application
 EXPOSE 9003
 
-# Finally runs the application
-CMD [ "npm","run", "start:server" ]
+# Finally runs the application may need to change to npm, run, start:server for nodemon
+CMD [ "node", "server/server.js" ]

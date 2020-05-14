@@ -30,7 +30,7 @@ class App extends Component {
   }
   getPrice(){
     let sku = this.state.sku
-    axios.get('http://localhost:9003/price/',{params:{sku: sku}})
+    axios.get('http://coryprice-env.eba-3imqfzng.us-east-2.elasticbeanstalk.com/price/',{params:{sku: sku}})
     .then(res => {
       console.log('success!')
       let product_info = res.data;
