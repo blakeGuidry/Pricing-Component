@@ -5,7 +5,7 @@ const AddToCart = (props) => {
 
   return (
   <div className = {styles.pricingCart}>
-    <button  className = {styles.cartBtn} >TESTING!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</button>
+    <button  className = {styles.cartBtn} >HELLO WORLD</button>
     <br></br>
 
     <div className = {styles.compareSave}>

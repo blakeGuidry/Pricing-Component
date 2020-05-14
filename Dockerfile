@@ -21,5 +21,5 @@ RUN npm run dev
 # Uses port which is used by the actual application
 EXPOSE 9003
 
-# Finally runs the application may need to change to npm, run, start:server for nodemon
+# Finally runs the application may need to change to "npm", "run", "start:server" 
 CMD [ "node", "server/server.js" ]
