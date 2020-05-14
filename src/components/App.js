@@ -12,7 +12,7 @@ class App extends Component {
     super(props);
     this.state = {
 
-      sku: '510122', //---> wilson
+      sku: '510125', //---> wilson
       product_info: '',
       isRendered: false,
       price: [],
