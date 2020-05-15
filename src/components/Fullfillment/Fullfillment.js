@@ -29,7 +29,7 @@ const Fullfillment = (props) => {
 
       <div className ={styles.shippingInfo}>
       <strong>Shipping:</strong>
-      <span >FREE</span> <span>Shipping by Mon,&nbsp;May&nbsp;11</span> or Next-Day Delivery is available to <div className = {styles.shippingZip}>78666</div>
+      <span >&nbsp;FREE</span> <span>Shipping by Mon,&nbsp;May&nbsp;11</span> or Next-Day Delivery is available to <div className = {styles.shippingZip}>78666</div>
       </div>
 
 
