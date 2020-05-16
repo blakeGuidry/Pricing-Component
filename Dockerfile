@@ -18,8 +18,10 @@ COPY . .
 
 RUN npm run dev
 
-# Uses port which is used by the actual application 
+# Uses port which is used by the actual application
 EXPOSE 9003
 
 # Finally runs the application may need to change to "npm", "run", "start:server"
 CMD [ "node", "server/server.js" ]
+
+# "Name": "coryh1007/price-repo", <- this goes above update in run file testing rn

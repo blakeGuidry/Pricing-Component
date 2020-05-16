@@ -9,7 +9,7 @@ const Fullfillment = (props) => {
 
       <div>
         <strong className={styles.pickup} id= "pickup">
-          Pick up in 1 hour at San Marcos
+          Pick up in 1 hour at SketchVille
         </strong>
       </div>
       <div className ={styles.checkStores}>
