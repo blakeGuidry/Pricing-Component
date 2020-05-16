@@ -5,13 +5,15 @@ const AddToCart = (props) => {
 
   return (
   <div className = {styles.pricingCart}>
-    <button  className = {styles.cartBtn} >HELLO WORLD</button>
+    <button  className = {styles.cartBtn} ><i className = {styles.icon} className="fa fa-shopping-cart" aria-hidden="true">&nbsp;&nbsp;</i>Add to Cart</button>
     <br></br>
 
     <div className = {styles.compareSave}>
+
       <div className = {styles.checkboxCompare}>
         <a className = {styles.checkboxPadding}><input className ={styles.checkBox} ></input></a>
-      Compare</div>
+      Compare </div>
+
 
       <a className={styles.checkboxSave}>
         <div className = {styles.saveForLater}>

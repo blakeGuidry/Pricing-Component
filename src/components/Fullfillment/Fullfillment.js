@@ -9,7 +9,7 @@ const Fullfillment = (props) => {
 
       <div>
         <strong className={styles.pickup} id= "pickup">
-          Pick up in 1 hour at San Marcos
+          Pick up in 1 hour at SketchVille
         </strong>
       </div>
       <div className ={styles.checkStores}>
@@ -29,7 +29,7 @@ const Fullfillment = (props) => {
 
       <div className ={styles.shippingInfo}>
       <strong>Shipping:</strong>
-      <span >FREE</span> <span>Shipping by Mon,&nbsp;May&nbsp;11</span> or Next-Day Delivery is available to <div className = {styles.shippingZip}>78666</div>
+      <span >&nbsp;FREE</span> <span>Shipping by Mon,&nbsp;May&nbsp;11</span> or Next-Day Delivery is available to <div className = {styles.shippingZip}>78666</div>
       </div>
 
 
