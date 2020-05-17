@@ -26,7 +26,7 @@ const getAll =(callback) => {
 
 
 const getOne = (sku,cb) => {
-  connection.query('SELECT * FROM products WHERE sku = ?;', [sku] ,(err, data)=> {
+  connection.query('SELECT * FROM products WHERE product_title = ?;', [sku] ,(err, data)=> {
     if(err){
       console.log('error query db getPrice', err);
       cb(err, null)
