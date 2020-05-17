@@ -11,8 +11,8 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-
-      sku: '125613', //---> wilson
+      //nameQuery: 'PowerShot',
+       sku: 'PowerShot', //---> wilson
       product_info: '',
       isRendered: false,
       price: [],
@@ -27,7 +27,21 @@ class App extends Component {
     this.getPrice();
     //need to add some type of event listener that updates sku
       //getprice
+
+      let currentItemFromSearch = document.getElementById("wilsoninputtag")
+
+      somethingStupid.addEventListener('submit', () => {
+        let currentName= somethingStupid.name;
+        console.log("this is inputtag.name:", currentName)
+        this.setState({
+          sku: currentName
+        },() => this.getPrice();)
+
+      })
+
   }
+
+
   getPrice(){
     let sku = this.state.sku
     axios.get('http://coryprice-env.eba-3imqfzng.us-east-2.elasticbeanstalk.com/price/',{params:{sku: sku}})
