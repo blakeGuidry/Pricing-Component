@@ -27,20 +27,19 @@ class App extends Component {
     this.getPrice();
     //need to add some type of event listener that updates sku
       //getprice
-
-      let currentItemFromSearch = document.getElementById("wilsoninputtag")
-
-      somethingStupid.addEventListener('submit', () => {
-        let currentName= somethingStupid.name;
-        console.log("this is inputtag.name:", currentName)
-        this.setState({
-          sku: currentName
-        },() => this.getPrice())
-
-      })
-
+    document.addEventListener('submit', () => { this.getSearchVal()
+    })
   }
 
+getSearchVal() {
+      let currentItemFromSearch = document.getElementById("wilsoninputtag");
+    if(currentItemFromSearch){
+      let currentProd= currentItemFromSearch.value;
+      this.setState({
+        sku: currentProd
+      },() => this.getPrice())
+    }
+}
 
   getPrice(){
     let sku = this.state.sku
