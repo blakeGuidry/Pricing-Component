@@ -35,7 +35,7 @@ class App extends Component {
         console.log("this is inputtag.name:", currentName)
         this.setState({
           sku: currentName
-        },() => this.getPrice();)
+        },() => this.getPrice())
 
       })
 
