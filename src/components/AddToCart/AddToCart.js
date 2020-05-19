@@ -5,7 +5,8 @@ const AddToCart = (props) => {
 
   return (
   <div className = {styles.pricingCart}>
-    <button id= "cory_inc" className = {styles.cartBtn} ><i className = {styles.icon} className="fa fa-shopping-cart" aria-hidden="true">&nbsp;&nbsp;</i>Add to Cart</button>
+    <form>
+    <button id= "cory_inc" onClick={props.cartAdd} value = {props.cartNav} className = {styles.cartBtn} ><i className = {styles.icon} className="fa fa-shopping-cart" aria-hidden="true">&nbsp;&nbsp;</i>Add to Cart</button></form>
     <br></br>
 
     <div className = {styles.compareSave}>
@@ -20,7 +21,7 @@ const AddToCart = (props) => {
           <img className = {styles.imageSave} src="https://assets.bbystatic.com/node-cusoweb/shop/save-for-later/dist/client/images/dc5b324bc35ff0a95420455e389225dc.svg" ></img>
         </div>
         <div className = {styles.savePadding}>Save</div></a>
-
+    
     </div>
     <div className = {styles.hereHelpContainer}>
       <div className = {styles.picBackdrop}>
@@ -32,7 +33,7 @@ const AddToCart = (props) => {
           <button type="button" className={styles.btnHelp} data-track="Contact Anywhere: Chat Now">Chat Now
           </button>
         </div>
-        <div >
+        <div className ={styles.pplimageSize} >
           <img src="https://pisces.bbystatic.com/image2/BestBuy_US/Gallery/GS-BS01-132098.png"  alt="Best   Buy Support Team"></img>
         </div>
       </div>

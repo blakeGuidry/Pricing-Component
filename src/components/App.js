@@ -1,32 +1,32 @@
 import React, { Component } from "react";
-//HEEELLLLLLPPPPPPPPPPP
-//This means your commit was successful buddy congrats you didnt lose a weeks worth of css , docker and AWS
+
 import PriceMatch from './PriceMatch/PriceMatch.js';
 import Fullfillment from './Fullfillment/Fullfillment.js';
 import AddToCart from './AddToCart/AddToCart.js';
-//import app from './App';
+
 let axios = require('axios');
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      //nameQuery: 'PowerShot',
-       sku: 'PowerShot', //---> wilson
+
+      sku: 'Rugged Wrist Strap',
       product_info: '',
       isRendered: false,
       price: [],
       msrp: [],
-      quantity: []
+      quantity: [],
+      cart: 0
 
     };
     this.getPrice = this.getPrice.bind(this);
+    this.addCartItem = this.addCartItem.bind(this);
   }
   componentDidMount(){
     //gets price
     this.getPrice();
-    //need to add some type of event listener that updates sku
-      //getprice
+
     document.addEventListener('submit', () => { this.getSearchVal()
     })
   }
@@ -43,6 +43,7 @@ getSearchVal() {
 
   getPrice(){
     let sku = this.state.sku
+    
     axios.get('http://coryprice-env.eba-3imqfzng.us-east-2.elasticbeanstalk.com/price/',{params:{sku: sku}})
     .then(res => {
       console.log('success!')
@@ -63,6 +64,17 @@ getSearchVal() {
 
     })
   }
+  addCartItem(e) {
+    e.preventDefault();
+    if(this.state.quantity > 0){
+    this.setState(()=>{ return {
+      cart: this.state.cart + 1,
+      quantity: this.state.quantity -1
+    }})
+    }else{
+      alert("sorry not sorry, it looks like we sold out of that item, please go ahead and step off! ");
+    }
+  }
 
 
   render() {
@@ -70,7 +82,7 @@ getSearchVal() {
       <div>
         <PriceMatch matching={this.state.msrp} pricing={this.state.price}/>
         <Fullfillment  availability ={this.state.quantity} />
-        <AddToCart productInCart = {this.state.product_info} />
+        <AddToCart productInCart = {this.state.product_info} cartNav = {this.state.cart} cartAdd ={this.addCartItem}/>
 
 
 
