@@ -4,3 +4,4 @@ dist
 config.js
 .env
 database/config.js
+data.csv
