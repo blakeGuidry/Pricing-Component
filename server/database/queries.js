@@ -17,7 +17,7 @@ const create1 = (args, cb) => {
 }
 
 const read1 = (sku, cb) => {
-  client.query('SELECT * FROM products WHERE product_title = $1', [sku])
+  client.query('SELECT * FROM public.products WHERE sku = $1', [sku])
     .then(prod => cb(null, prod))
     .catch(err => {
       console.error(err);

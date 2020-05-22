@@ -4,7 +4,7 @@ import PriceMatch from './PriceMatch/PriceMatch.js';
 import Fullfillment from './Fullfillment/Fullfillment.js';
 import AddToCart from './AddToCart/AddToCart.js';
 
-let axios = require('axios');
+const axios = require('axios');
 
 class App extends Component {
   constructor(props) {
@@ -44,7 +44,7 @@ getSearchVal() {
   getPrice(){
     let sku = this.state.sku
     
-    axios.get('/price', {params:{sku: sku}})
+    axios.get(`/price/${sku}`)
     .then(res => {
       console.log('success!')
       let product_info = res.data;

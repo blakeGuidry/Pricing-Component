@@ -28,12 +28,12 @@ App.post('/product', (req, res) => {
   })
 })
 
-App.get('/price', (req, res) => {
-  db.read1(req.query.sku,(err, productInfo) => {
+App.get('/price/:sku', (req, res) => {
+  db.read1(req.params.sku, (err, productInfo) => {
     if (err) {
-      res.status(404).send('error in server could not get the Price!'); // 404 Not Found
+      res.status(404).send('Error getting product from db'); // 404 Not Found
     } else {
-      res.send(productInfo);
+      res.send(productInfo.rows[0]);
     }
   })
 });
