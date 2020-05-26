@@ -29,6 +29,7 @@
   "dependencies": {
     "classnames": "^2.2.6",
     "cors": "^2.8.5",
+    "dse-driver": "^2.3.1",
     "multer": "^1.4.2",
     "nodemon": "^2.0.3",
     "react": "^16.6.0",
