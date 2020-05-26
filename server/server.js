@@ -5,10 +5,12 @@ const PORT = 9003;
 const db = require('./database/queries');
 const bodyParser = require('body-parser');
 const cors = require('cors');
+const responseTime = require('response-time');
 
 //middlewware
 App.use(cors());
 App.use(express.static(path.join(__dirname, '../dist' )));
+App.use(responseTime());
 
 App.use(bodyParser.json());
 App.use(bodyParser.urlencoded({extended: true}));
