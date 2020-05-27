@@ -1,3 +1,4 @@
+require('newrelic');
 const express = require('express');
 const App = express();
 const path =require('path');

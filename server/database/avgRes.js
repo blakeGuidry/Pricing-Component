@@ -12,13 +12,13 @@ const request = () => {
       successCount++;
       console.log(`Avg response time of ${totTime / successCount}ms for ${successCount} requests`)
       
-      if (successCount < 100) {
+      if (successCount < 1000) {
         request();
       }
     })
     .catch(err => {
       console.log(err)
-      if (successCount < 100) {
+      if (successCount < 1000) {
         request();
       }
     })

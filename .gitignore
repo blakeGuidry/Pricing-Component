@@ -5,3 +5,5 @@ config.js
 .env
 server/database/config.js
 data.csv
+newrelic_agent.log
+newrelic.js
