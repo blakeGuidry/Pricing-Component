@@ -1,6 +1,7 @@
 const { client } = require('./queries');
 const fs = require('fs');
 const copyFrom = require('pg-copy-streams').from;
+const progress = require('progress-stream');
 const path = require('path');
 
 client.query(`
@@ -23,6 +24,9 @@ CREATE TABLE products (
   .then(() => {
     const stream = client.query(copyFrom('COPY products FROM STDIN CSV HEADER'));
     const fileStream = fs.createReadStream(path.join(__dirname, '../../data.csv'));
+    const stat = fs.statSync(path.join(__dirname, '../../data.csv'));
+    const str = progress( {length: stat.size, time: 100 } );
+    str.on('progress', progress => console.log(progress) )
     fileStream.on('error', (error) => {
       console.log(`Error reading file: ${error}`);
     })
@@ -33,5 +37,5 @@ CREATE TABLE products (
       console.log('WOW! We loaded 10M items!')
       client.end();
     })
-    fileStream.pipe(stream)
+    fileStream.pipe(str).pipe(stream);
   })

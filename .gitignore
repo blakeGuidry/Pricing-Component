@@ -5,3 +5,4 @@ data.csv
 newrelic_agent.log
 newrelic.js
 sdc-pricing-component.pem
+postgres.pem

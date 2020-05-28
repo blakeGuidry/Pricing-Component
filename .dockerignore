@@ -8,3 +8,4 @@ server/k6.js
 newrelic_agent.log
 .babelrc
 sdc-pricing-component.pem
+postgres.pem

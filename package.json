@@ -27,6 +27,7 @@
     "mysql": "^2.13.0",
     "newrelic": "^6.8.0",
     "pg-copy-streams": "^5.0.0",
+    "progress-stream": "^2.0.0",
     "react-hot-loader": "^4.3.11",
     "response-time": "^2.3.2",
     "style-loader": "^1.2.1",
