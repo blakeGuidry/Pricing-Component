@@ -1,1 +1,10 @@
 node_modules
+data.csv
+webpack.config.js
+server/database/avgRes.js
+server/database/generateData.js
+server/database/seed.js
+server/k6.js
+newrelic_agent.log
+.babelrc
+sdc-pricing-component.pem

@@ -11,7 +11,7 @@ class App extends Component {
     super(props);
     this.state = {
 
-      sku: 'Rugged Wrist Strap',
+      sku: 1,
       product_info: '',
       isRendered: false,
       price: [],
@@ -44,7 +44,7 @@ getSearchVal() {
   getPrice(){
     let sku = this.state.sku
     
-    axios.get(`/price/${sku}`)
+    axios.get(`http://ec2-18-224-65-153.us-east-2.compute.amazonaws.com:9003/price/${sku}`)
     .then(res => {
       console.log('success!')
       let product_info = res.data;
