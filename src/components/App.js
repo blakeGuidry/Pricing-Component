@@ -4,14 +4,14 @@ import PriceMatch from './PriceMatch/PriceMatch.js';
 import Fullfillment from './Fullfillment/Fullfillment.js';
 import AddToCart from './AddToCart/AddToCart.js';
 
-let axios = require('axios');
+const axios = require('axios');
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
 
-      sku: 'Rugged Wrist Strap',
+      sku: 1,
       product_info: '',
       isRendered: false,
       price: [],
@@ -44,20 +44,22 @@ getSearchVal() {
   getPrice(){
     let sku = this.state.sku
     
-    axios.get('http://coryprice-env.eba-3imqfzng.us-east-2.elasticbeanstalk.com/price/',{params:{sku: sku}})
+    axios.get(`http://ec2-13-59-13-9.us-east-2.compute.amazonaws.com:9003/price/${sku}`)
     .then(res => {
-      console.log('success!')
+      console.log(res.data)
       let product_info = res.data;
       let isRendered = true;
-      let price = res.data[0]["sale_price"];
-      let msrp =res.data[0]["msrp"];
-      let quantity = res.data[0]["quantity"];
+      let price = Number(res.data["sale_price"]);
+      let msrp = Number(res.data["msrp"]);
+      let quantity = res.data["quantity"];
       console.log(price)
-      this.setState({product_info});
-      this.setState({isRendered});
-      this.setState({msrp});
-      this.setState({price});
-      this.setState({quantity});
+      this.setState({
+        product_info,
+        isRendered,
+        msrp,
+        price,
+        quantity
+      });
     })
     .catch( err => {
         console.log("whoops!",err);
